@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kasir</title>
+    <link rel="stylesheet" href="/css/Kasir.css">
+</head>
+<body>
+
+<script>
+   
+    if (!sessionStorage.getItem("cart")) {
+        alert("Keranjang kosong! Silakan pesan dulu.");
+        window.location.href = "/pesanan";
+    }
+</script>
+
+<div class="container">
+    <h2>Keranjang Pesanan</h2>
+
+    <div class="order-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Makanan / Minuman</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody id="kasir-table"></tbody>
+        </table>
+
+        <div class="total">
+            Total : Rp <span id="total"></span>
+        </div>
+    </div>
+
+    <a href="/pembayaran/tunai" class="btn">Bayar dengan Tunai</a>
+    <br>
+    <a href="/pembayaran/kartu" class="btn">Bayar dengan Kartu Kredit</a>
+    <br>
+    <a href="/pesanan" style="background:#dc3545;" class="btn">Kembali ke Pesanan</a>
+</div>
+
+<script>
+   
+    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+    let total = sessionStorage.getItem("total") || 0;
+    document.getElementById("total").innerText = total;
+
+    let table = document.getElementById("kasir-table");
+    table.innerHTML = "";
+    cart.forEach(item => {
+        let row = document.createElement("tr");
+
+        let col1 = document.createElement("td");
+        col1.textContent = item.name;
+
+        let col2 = document.createElement("td");
+        col2.textContent = "Rp " + item.price;
+
+        row.appendChild(col1);
+        row.appendChild(col2);
+        table.appendChild(row);
+    });
+</script>
+
+</body>
+</html>
