@@ -1,13 +1,13 @@
 
 
-    // Ambil data dari session
+ 
     let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
     let total = parseInt(sessionStorage.getItem("total")) || 0;
     let tipe = sessionStorage.getItem("tipePesanan") || "";
     let meja = sessionStorage.getItem("nomorMeja") || "";
     let metode = sessionStorage.getItem("metodePembayaran") || "";
 
-    // Tampilkan data
+ 
     document.getElementById("tipePesanan").innerText = tipe;
     document.getElementById("total").innerText = total;
     document.getElementById("metode").innerText = metode;
@@ -17,7 +17,7 @@
         document.getElementById("nomorMeja").innerText = meja;
     }
 
-    // Isi tabel pesanan
+ 
     let table = document.getElementById("struk-table");
     table.innerHTML = "";
 
@@ -35,7 +35,7 @@
         table.appendChild(row);
     });
 
-    // Hitung uang kembalian jika pembayaran Tunai
+ 
     if(metode === "Tunai") {
         let uangBayar = parseInt(sessionStorage.getItem("uangBayar")) || 0;
         let kembali = uangBayar - total;
@@ -43,3 +43,4 @@
         document.getElementById("kembalian").innerText = kembali;
         document.getElementById("kembalianRow").style.display = "block";
     }
+
