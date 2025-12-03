@@ -63,7 +63,6 @@
         </div>
     </div>
 
-    <!-- MENU MAKANAN -->
     <h4 class="mb-3">Makanan</h4>
     <div class="row">
         <div class="col-md-4 mb-3" th:each="m : ${makananList}">
@@ -75,7 +74,7 @@
                     Rp <span th:text="${m.harga}"></span>
                 </p>
 
-                <!-- Tambahan: Level pedas -->
+           
                 <p class="text-danger">
                     Level Pedas: <span th:text="${m.pedasLevel}"></span>
                 </p>
@@ -90,7 +89,7 @@
         </div>
     </div>
 
-    <!-- MENU MINUMAN -->
+    
     <h4 class="mb-3 mt-4">Minuman</h4>
     <div class="row">
         <div class="col-md-4 mb-3" th:each="m : ${minumanList}">
@@ -102,7 +101,7 @@
 
                 <p>Rp <span th:text="${m.harga}"></span></p>
 
-                <!--utk memasukkan item ke keranjang-->
+            
                 <button class="btn btn-primary w-100 add-btn" 
                         th:data-nama="${m.nama}"
                         th:data-harga="${m.harga}"
@@ -114,7 +113,6 @@
         </div>
     </div>
 
-    <!-- KERANJANG -->
     <div class="card p-4 mt-4">
         <h4>Keranjang</h4>
         <ul id="cart-list" class="list-group mb-3"></ul>
@@ -128,3 +126,4 @@
 
 </body>
 </html>
+
