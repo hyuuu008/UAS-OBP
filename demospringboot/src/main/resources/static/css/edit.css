@@ -1,0 +1,20 @@
+
+
+body {
+    background: url("/images/restoran.jpg") no-repeat center/cover fixed;
+    min-height: 100vh;
+}
+
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+}
+
+.form-label {
+    color: white;
+}
+
+.card.mx-auto {
+    max-width: 600px;
+}

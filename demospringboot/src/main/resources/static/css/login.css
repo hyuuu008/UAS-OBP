@@ -1,0 +1,54 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("/images/restoran.jpg") no-repeat center/cover fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.glass {
+    background: rgba(255, 255, 255, 0.17);
+    padding: 35px;
+    width: 340px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4c71;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff234f;
+}
