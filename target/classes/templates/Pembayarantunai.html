@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pembayaran Tunai</title>
+    <link rel="stylesheet" th:href="@{/css/pembayaran.css}">
+    <style>
+        #error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Pembayaran Tunai</h2>
+
+    <form id="tunaiForm" action="/struk" method="get">
+        <label>Jumlah Uang:</label>
+        <input type="number" id="uang" name="uang" required>
+
+        <p id="error-message">Uang anda tidak mencukupi!</p>
+
+        <button type="submit" class="btn">Bayar</button>
+    </form>
+
+    <a class="btn" href="/kasir">Kembali</a>
+</div>
+
+<script>
+    let totalHarga = parseInt(sessionStorage.getItem("total")); // total dari kasir
+
+    document.getElementById("tunaiForm").addEventListener("submit", function(event) {
+        let uangBayar = parseInt(document.getElementById("uang").value);
+        let errorMessage = document.getElementById("error-message");
+
+        // Jika uang tidak mencukupi → TOLAK & tampilkan pesan
+        if (uangBayar < totalHarga) {
+            event.preventDefault();     // batalkan submit
+            errorMessage.style.display = "block";
+            return;
+        }
+
+        // Jika cukup → simpan data dan lanjut ke struk
+        sessionStorage.setItem("metodePembayaran", "Tunai");
+        sessionStorage.setItem("uangBayar", uangBayar);
+    });
+</script>
+
+</body>
+</html>

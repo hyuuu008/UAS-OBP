@@ -1,0 +1,27 @@
+#feedback-form {
+width: 280px;
+margin: 0 auto;
+background-color: #fcfcfc;
+padding: 20px 50px 40px;
+box-shadow: 1px 4px 10px 1px #aaa;
+font-family: sans-serif;
+}
+#feedback-form input,
+#feedback-form select {
+width: 100%;
+background-color: #f3f3f3;
+border: none;
+padding: 6px 16px;
+margin-bottom: 15px;
+}
+#feedback-form button[type=submit] {
+display: block;
+margin: 20px auto 0;
+width: 150px;
+height: 40px;
+border-radius: 25px;
+border: none;
+color: #fff;
+font-weight: 700;
+background: linear-gradient(to right, #207cca 0%,#9f58a3 100%);
+}
