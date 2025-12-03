@@ -1,4 +1,4 @@
-//pilih layanan
+
     document.getElementById("dinein").addEventListener("change", () => {
         document.getElementById("table-number").style.display = "block";
     });
@@ -6,7 +6,7 @@
         document.getElementById("table-number").style.display = "none";
     });
 
- //sistem keranjang
+
     let cart = [];
     let total = 0;
 
@@ -22,7 +22,7 @@
         updateCartDisplay();
     }
 
-    //mengambil elemen list keranjang
+  
     function updateCartDisplay() {
         let list = document.getElementById("cart-list");
         list.innerHTML = "";
@@ -45,14 +45,14 @@
         document.getElementById("total").innerText = total;
     }
 
-    // hapus item
+ 
     function removeItem(index) {
         cart.splice(index, 1);
         updateCartDisplay();
     }
 
 
-    // buat Tambah
+ 
     document.querySelectorAll(".add-btn").forEach(btn => {
         btn.addEventListener("click", () => {
             const name = btn.dataset.nama;
@@ -61,7 +61,7 @@
         });
     });
 
-    // KE KASIR
+
     function goToKasir() {
         if (cart.length === 0) {
             alert("Keranjang masih kosong!");
@@ -83,10 +83,11 @@
             sessionStorage.setItem("nomorMeja", meja);
         }
 
-        //untuk menyimpan data sementara
+   
         sessionStorage.setItem("tipePesanan", service.value);
         sessionStorage.setItem("cart", JSON.stringify(cart));
         sessionStorage.setItem("total", total);
 
         window.location.href = "/kasir";
     }
+
