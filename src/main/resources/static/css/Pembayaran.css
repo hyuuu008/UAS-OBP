@@ -1,0 +1,107 @@
+/* ===== BACKGROUND ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("/images/restoran.jpg") no-repeat center/cover fixed;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Overlay gelap */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    z-index: -1;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.20);
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    color: white;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+}
+
+/* TITLE */
+.container h2, 
+.container h3 {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+}
+
+/* ===== FORM ===== */
+label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #eaeaea;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    background: rgba(255,255,255,0.55);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 12px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background: #1e7c32;
+}
+
+/* Tombol kembali */
+.back-btn {
+    background: #dc3545;
+    margin-top: 15px;
+}
+
+.back-btn:hover {
+    background: #b72b39;
+}
+
+/* Tambahan jika ingin form terlihat lebih cantik */
+form {
+    margin-top: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .container {
+        margin: 30px;
+        padding: 20px;
+    }
+}

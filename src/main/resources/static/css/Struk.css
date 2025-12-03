@@ -1,0 +1,102 @@
+/* ===== BACKGROUND ELEGAN ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url("/images/restoran.jpg")
+            center/cover no-repeat fixed;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Overlay gelap tipis */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+}
+
+/* ===== BOX STRUK ===== */
+.box {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    color: white;
+}
+
+/* ===== TITLE ===== */
+.box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 26px;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    color: #222;
+}
+
+th {
+    background: rgba(0, 123, 255, 0.9);
+    color: white;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    background: rgba(255,255,255,0.9);
+    border-bottom: 1px solid #ccc;
+}
+
+/* Hilangkan border terakhir */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== TOTAL, METODE, KEMBALIAN ===== */
+h3 {
+    text-align: right;
+    margin-top: 15px;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* ===== BUTTON ===== */
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: #dc3545;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+button:hover {
+    background: #c82333;
+    transform: scale(1.03);
+}

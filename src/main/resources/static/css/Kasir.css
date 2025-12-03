@@ -1,0 +1,107 @@
+/* ===== BACKGROUND BLUR ELEGAN ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("/images/restoran.jpg") no-repeat center/cover fixed;
+    backdrop-filter: blur(6px);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Gelapin sedikit latar */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 750px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.container h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+/* ===== ORDER BOX ===== */
+.order-box {
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(8px);
+    margin-bottom: 25px;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    color: white;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    font-size: 17px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+td {
+    padding: 10px 5px;
+    font-size: 16px;
+}
+
+/* ===== TOTAL ===== */
+.total {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    text-align: center;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #005ec4;
+    transform: scale(1.02);
+}
+
+/* BACK BUTTON MERAH */
+.btn[style] {
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 18px;
+    }
+}
